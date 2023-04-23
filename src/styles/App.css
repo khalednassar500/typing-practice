@@ -1,0 +1,169 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.App {
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+  padding: 0 25px 25px 25px;
+  min-height: 100vh;
+  background: #fff;
+}
+
+.logo {
+  border: 2px dashed gray;
+  border-top: 0;
+  display: inline-block;
+  padding: 10px;
+  color: gray;
+  font-family: "Chakra Petch", sans-serif;
+  color: #4761e6;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 1;
+}
+
+main {
+  position: relative;
+}
+.loading-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loading-page p {
+  animation: loading 1s infinite linear;
+  font-size: 1.5em;
+  margin: 0 5px;
+}
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* -- description --*/
+.description {
+  margin: 50px 0;
+  font-size: 1.3em;
+  line-height: 1.5em;
+}
+
+/* -- input data --*/
+.input-data {
+  margin: auto;
+  font-size: 1.2em;
+  padding: 25px;
+  border: 3px groove rgba(239, 239, 239, 0.5);
+}
+.input-data p {
+  color: gray;
+}
+.input-data p:nth-of-type(2) {
+  margin-top: 25px;
+}
+.input-data label {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
+  margin-top: 25px;
+}
+.input-data label p {
+  color: #000;
+}
+.input-data input,
+.input-data textarea {
+  width: 60%;
+  padding: 5px 10px;
+  font-size: 1.1em;
+  resize: vertical;
+  outline: 1px solid transparent;
+  border: 1px solid;
+}
+.input-data input:focus,
+.input-data textarea:focus {
+  outline: 1px solid #4761e6;
+  border: 1px solid #4761e6;
+}
+.input-data button {
+  font-size: 1.2em;
+  padding: 5px 25px;
+  margin-top: 25px;
+  cursor: pointer;
+  background-color: #fff;
+  border: 0;
+  color: gray;
+  font-weight: bold;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.input-data button:hover {
+  transition: 0.2s;
+  color: #4761e6;
+}
+
+/*-- typing area --*/
+.typing-area-con {
+  padding-top: 100px;
+}
+.typing-operation {
+  display: flex;
+  justify-content: space-between;
+}
+.typing-operation button {
+  font-size: 25px;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  background-image: linear-gradient(to bottom right, lightgray, #efefef);
+  margin-bottom: 15px;
+  box-shadow: 3px 3px 5px lightgray;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.typing-operation button:hover {
+  background: #efefef;
+}
+.typing-area {
+  font-family: "Chakra Petch", sans-serif;
+  border: 2px dashed gray;
+  padding: 25px;
+  font-size: 2em;
+  text-align: left;
+}
+.typing-area span {
+  border-bottom: 2px solid lightgray;
+  margin: 1px 3px;
+  padding: 0 1px;
+  opacity: 0.4;
+  height: 40px;
+  display: inline-block;
+}
+
+.typing-area .empty-letter {
+  color: #fff;
+}
+.typing-area span.complete {
+  opacity: 1;
+  border-bottom: 2px solid gray;
+}
+.typing-area span.error {
+  opacity: 1;
+  background: rgba(255, 99, 71, 0.5);
+}
+.typing-area span.empty-letter.error {
+  color: rgba(255, 99, 71, 0);
+}
