@@ -115,6 +115,20 @@ main {
   color: #4761e6;
 }
 
+@media screen and (max-width: 600px) {
+  .input-data label {
+    flex-direction: column;
+    width: 90%;
+  }
+  .input-data input,
+  .input-data textarea {
+    width: 100%;
+  }
+  h1 {
+    font-size: 25px;
+  }
+}
+
 /*-- typing area --*/
 .typing-area-con {
   padding-top: 100px;
@@ -136,6 +150,17 @@ main {
 }
 .typing-operation button:hover {
   background: #efefef;
+}
+.typing-operation button.timer {
+  font-size: 28px;
+}
+.timer-con {
+  display: inline-block;
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 2px solid gray;
+  width: 120px;
 }
 .typing-area {
   font-family: "Chakra Petch", sans-serif;
